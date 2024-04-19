@@ -9,62 +9,64 @@ CREATE TABLE PERSON (
     Email VARCHAR(100)
 );
 
+
 CREATE TABLE HEALTHCARE_PROFESSIONAL (
-    Person_employee_id INT,
+    Person_id INT,
     Employee_id INT PRIMARY KEY,
     Specialization VARCHAR(100),
     Department VARCHAR(100),
     Working_hours VARCHAR(50),
     Years_of_experience INT,
     Address VARCHAR(255),
-    FOREIGN KEY(Person_employee_id) REFERENCES PERSON(Person_id)
+    FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id)
 );
+
 CREATE TABLE PATIENT (
-    Person_patient_id INT,
+    Person_id INT,
     Patient_id INT PRIMARY KEY,
     Medical_history TEXT,
-    FOREIGN KEY(Person_patient_id) REFERENCES PERSON(Person_id)
+    FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id)
 );
 CREATE TABLE MEDICAL_RECORD (
     Record_id INT PRIMARY KEY,
-    Patient_record_id INT NOT NULL,
-    Employee_record_id INT NOT NULL,
+    Patient_id INT NOT NULL,
+    Employee_id INT NOT NULL,
     Current_medications TEXT,
     Allergies TEXT,
     Treatment_history TEXT,
     Lab_results TEXT,
     Past_Diagnoses TEXT,
-	FOREIGN KEY(Patient_record_id) REFERENCES PATIENT(Patient_id),
-    FOREIGN KEY(Employee_record_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
+	FOREIGN KEY(Patient_id) REFERENCES PATIENT(Patient_id),
+    FOREIGN KEY(Employee_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
 );
 CREATE TABLE INSURANCE_INFORMATION (
     Insurance_id INT PRIMARY KEY,
-    Patient_insurance_id INT,
+    Patient_id INT,
     Amount DECIMAL(10, 2),
     Insurance_company VARCHAR(100),
     Patient_insurance VARCHAR(100),
-	FOREIGN KEY(Patient_insurance_id) REFERENCES PATIENT(Patient_id)
+	FOREIGN KEY(Patient_id) REFERENCES PATIENT(Patient_id)
 );
 CREATE TABLE BILLING (
     Billing_id INT PRIMARY KEY,
-    Patient_bill_id INT,
-    Insurance_bill_id INT,
+    Patient_id INT,
+    Insurance_id INT,
     Payment_method VARCHAR(50),
     Itemized_costs TEXT,
     Date DATE,
- 	FOREIGN KEY(Patient_bill_id) REFERENCES PATIENT(Patient_id),
-    FOREIGN KEY(Insurance_bill_id) REFERENCES INSURANCE_INFORMATION(Insurance_id)
+ 	FOREIGN KEY(Patient_id) REFERENCES PATIENT(Patient_id),
+    FOREIGN KEY(Insurance_id) REFERENCES INSURANCE_INFORMATION(Insurance_id)
 );
 CREATE TABLE APPOINTMENT (
     Appointment_id INT PRIMARY KEY,
-    Patient_appt_id INT,
-    Employee_appt_id INT,
+    Patient_id INT,
+    Employee_id INT,
     Professional_id INT,
     Purpose VARCHAR(255),
     Date DATE,
     Time TIME,
-    FOREIGN KEY(Patient_appt_id) REFERENCES PATIENT(Patient_id),
-    FOREIGN KEY(Employee_appt_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
+    FOREIGN KEY(Patient_id) REFERENCES PATIENT(Patient_id),
+    FOREIGN KEY(Employee_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
 );
 CREATE TABLE TREATMENT (
     Treatment_id INT PRIMARY KEY,
@@ -99,3 +101,5 @@ CREATE TABLE ADMINISTRATIVE_STAFF (
     Employee_admin_id INT PRIMARY KEY,
     FOREIGN KEY(Employee_admin_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
 );
+
+
