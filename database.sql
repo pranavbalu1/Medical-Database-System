@@ -9,7 +9,6 @@ CREATE TABLE PERSON (
     Email VARCHAR(100)
 );
 
-
 CREATE TABLE HEALTHCARE_PROFESSIONAL (
     Person_id INT,
     Employee_id INT PRIMARY KEY,
@@ -18,15 +17,38 @@ CREATE TABLE HEALTHCARE_PROFESSIONAL (
     Working_hours VARCHAR(50),
     Years_of_experience INT,
     Address VARCHAR(255),
-    FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id)
+    FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id),
+    CHECK(REGEXP_LIKE(Employee_id, '^EMP-[0-9]{3}$'))
 );
 
 CREATE TABLE PATIENT (
     Person_id INT,
     Patient_id INT PRIMARY KEY,
     Medical_history TEXT,
-    FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id)
+    FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id),
+    CHECK(REGEXP_LIKE(Patient_id, '^PT-[0-9]{5}$'))
 );
+
+CREATE TABLE ALLERGENS (
+	Allergen VARCHAR(50) PRIMARY KEY
+);
+
+INSERT INTO ALLERGENS (Allergen) 
+VALUES
+	('Peanuts'),
+    ('Tree-Nuts'),
+    ('Dairy'),
+    ('Eggs'),
+    ('Shellfish'),
+    ('Fish'),
+    ('Soy'),
+    ('Wheat'),
+    ('Sesame');
+
+ALTER TABLE PATIENT ADD CONSTRAINT chk_allergies CHECK (
+    Medical_history IN (SELECT Allergen FROM ALLERGENS)
+);
+
 CREATE TABLE MEDICAL_RECORD (
     Record_id INT PRIMARY KEY,
     Patient_id INT NOT NULL,
@@ -80,7 +102,8 @@ CREATE TABLE TREATMENT (
     Pharmacy VARCHAR(100),
 	FOREIGN KEY(Recipient_id) REFERENCES PATIENT(Patient_id),
 	FOREIGN KEY(Employee_id_prescriber) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id),
-    FOREIGN KEY(Employee_id_conductor) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
+    FOREIGN KEY(Employee_id_conductor) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id),
+    CHECK(Start_date < End_date)
 );
 CREATE TABLE DOCTOR (
     Employee_doctor_id INT PRIMARY KEY,
@@ -101,5 +124,4 @@ CREATE TABLE ADMINISTRATIVE_STAFF (
     Employee_admin_id INT PRIMARY KEY,
     FOREIGN KEY(Employee_admin_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
 );
-
 
