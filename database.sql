@@ -87,7 +87,6 @@ CREATE TABLE APPOINTMENT (
     Appointment_id VARCHAR(10) PRIMARY KEY,
     Patient_id VARCHAR(10),
     Employee_id VARCHAR(10),
-    Professional_id VARCHAR(10),
     Purpose VARCHAR(255),
     Date DATE,
     Time TIME,
