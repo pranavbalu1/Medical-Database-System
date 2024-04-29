@@ -14,31 +14,33 @@ VALUES
     ('P-011', 'Michael', 'Joseph', 'Brown', '1980-01-01', '+1235631890', 'M', '123 Elm St, City, Country', 'michael.brown@example.com');
 
 
-INSERT INTO HEALTHCARE_PROFESSIONAL (Person_id, Employee_id, FName, MName, SName, Specialization, Department, Working_hours)
+    
+INSERT INTO HEALTHCARE_PROFESSIONAL (Person_id, Employee_id, Specialization, Department, Working_hours)
 VALUES
-    ('P-003', 'EMP-001', 'William', 'Henry', 'Jones', 'Cardiologist', 'Cardiology', '8:00 AM - 4:00 PM'),
-    ('P-004', 'EMP-002', 'Sarah', NULL, 'Brown', 'Pediatrician', 'Pediatrics', '9:00 AM - 5:00 PM'),
-    ('P-005', 'EMP-003', 'Emily', 'Anne', 'Wilson', 'Orthopedic Surgeon', 'Orthopedics', '7:00 AM - 3:00 PM'),
-    ('P-006', 'EMP-004', 'David', 'Michael', 'Johnson', 'Radiologist', 'Radiology', '8:30 AM - 4:30 PM'),
-    ('P-007', 'EMP-005', 'Lisa', 'Marie', 'Miller', 'Dermatologist', 'Dermatology', '8:00 AM - 4:00 PM'),
-    ('P-008', 'EMP-006', 'Michael', NULL, 'Davis', 'Physical Therapist', 'Physical Therapy', '10:00 AM - 6:00 PM'),
-    ('P-009', 'EMP-007', 'Amanda', 'Grace', 'Martinez', 'Pharmacist', 'Pharmacy', '9:00 AM - 5:00 PM'),
-    ('P-010', 'EMP-008', 'Matthew', 'Thomas', 'Thompson', 'Surgical Nurse', 'Surgery', '7:00 AM - 3:00 PM'),
-    ('P-011', 'EMP-009', 'Michael', 'Joseph', 'Brown', 'Medical Secretary', 'Administration', '8:30 AM - 4:30 PM');
+    ('P-003', 'EMP-001', 'Cardiologist', 'Cardiology', '8:00 AM - 4:00 PM'),
+    ('P-004', 'EMP-002', 'Pediatrician', 'Pediatrics', '9:00 AM - 5:00 PM'),
+    ('P-005', 'EMP-003', 'Orthopedic Surgeon', 'Orthopedics', '7:00 AM - 3:00 PM'),
+    ('P-006', 'EMP-004', 'Radiologist', 'Radiology', '8:30 AM - 4:30 PM'),
+    ('P-007', 'EMP-005', 'Dermatologist', 'Dermatology', '8:00 AM - 4:00 PM'),
+    ('P-008', 'EMP-006', 'Physical Therapist', 'Physical Therapy', '10:00 AM - 6:00 PM'),
+    ('P-009', 'EMP-007', 'Pharmacist', 'Pharmacy', '9:00 AM - 5:00 PM'),
+    ('P-010', 'EMP-008', 'Surgical Nurse', 'Surgery', '7:00 AM - 3:00 PM'),
+    ('P-011', 'EMP-009', 'Medical Secretary', 'Administration', '8:30 AM - 4:30 PM');
 
 -- Sample data for PATIENT table
-INSERT INTO PATIENT (Person_id, Patient_id, FName, MName, SName, Medical_history)
+INSERT INTO PATIENT (Person_id, Patient_id, Medical_history)
 VALUES
-    ('P-001', 'PT-00001', 'John', NULL, 'Doe', 'High blood pressure, Diabetes'),
-    ('P-002', 'PT-00002', 'Jane', NULL, 'Smith', 'Asthma, Allergies'),
-    ('P-003', 'PT-00003', 'William', 'Henry', 'Jones', 'Knee injury'),
-    ('P-004', 'PT-00004', 'Sarah', NULL, 'Brown', 'Fractured arm'),
-    ('P-005', 'PT-00005', 'Emily', 'Anne', 'Wilson', 'Acne, Eczema'),
-    ('P-006', 'PT-00006', 'David', 'Michael', 'Johnson', 'Chronic back pain'),
-    ('P-007', 'PT-00007', 'Lisa', 'Marie', 'Miller', 'Anxiety, Depression'),
-    ('P-008', 'PT-00008', 'Michael', NULL, 'Davis', 'Migraines'),
-    ('P-009', 'PT-00009', 'Amanda', 'Grace', 'Martinez', 'Heart murmur'),
-    ('P-010', 'PT-00010', 'Matthew', 'Thomas', 'Thompson', 'Hypothyroidism');
+    ('P-001', 'PT-00001', 'High blood pressure, Diabetes'),
+    ('P-002', 'PT-00002', 'Asthma, Allergies'),
+    ('P-003', 'PT-00003', 'Knee injury'),
+    ('P-004', 'PT-00004', 'Fractured arm'),
+    ('P-005', 'PT-00005', 'Acne, Eczema'),
+    ('P-006', 'PT-00006', 'Chronic back pain'),
+    ('P-007', 'PT-00007', 'Anxiety, Depression'),
+    ('P-008', 'PT-00008', 'Migraines'),
+    ('P-009', 'PT-00009', 'Heart murmur'),
+    ('P-010', 'PT-00010', 'Hypothyroidism');
+
 
 -- Sample data for ALLERGENS table (already inserted in previous queries)
 
