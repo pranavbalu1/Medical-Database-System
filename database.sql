@@ -1,6 +1,6 @@
 DROP SCHEMA IF EXISTS Phase3; -- take this line out
 CREATE database Phase3;
-USE preferred_healthcare_professional_viewEmployee_idPhase3;
+USE Phase3;
 CREATE TABLE PERSON (
     Person_id VARCHAR(10) PRIMARY KEY,
     FName text,  
