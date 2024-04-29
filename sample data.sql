@@ -87,19 +87,19 @@ VALUES
     ('BIL-010', 'PT-00010', 'INS-010', 'Insurance', 'Consultation: $400', '2024-04-24');
 
 -- Sample data for APPOINTMENT table
-INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Professional_id, Purpose, Date, Time)
+INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Purpose, Date, Time)
 VALUES
-    ('APT-001', 'PT-00001', 'EMP-001', 'EMP-001', 'Follow-up appointment', '2024-05-01', '09:00:00'),
-    ('APT-002', 'PT-00002', 'EMP-002', 'EMP-002', 'Annual checkup', '2024-05-02', '10:00:00'),
-    ('APT-003', 'PT-00003', 'EMP-003', 'EMP-003', 'Physical therapy session', '2024-05-03', '11:00:00'),
-    ('APT-004', 'PT-00004', 'EMP-004', 'EMP-004', 'Cast removal', '2024-05-04', '12:00:00'),
-    ('APT-005', 'PT-00005', 'EMP-005', 'EMP-005', 'Dermatology consultation', '2024-05-05', '13:00:00'),
-    ('APT-006', 'PT-00006', 'EMP-001', 'EMP-001', 'Back pain assessment', '2024-05-06', '14:00:00'),
-    ('APT-007', 'PT-00007', 'EMP-002', 'EMP-002', 'Counseling session', '2024-05-07', '15:00:00'),
-    ('APT-008', 'PT-00008', 'EMP-003', 'EMP-003', 'Migraine consultation', '2024-05-08', '16:00:00'),
-    ('APT-009', 'PT-00009', 'EMP-004', 'EMP-004', 'Heart murmur checkup', '2024-05-09', '17:00:00'),
-    ('APT-010', 'PT-00010', 'EMP-005', 'EMP-005', 'Thyroid checkup', '2024-05-10', '18:00:00');
-
+    ('APT-001', 'PT-00001', 'EMP-001', 'Follow-up appointment', '2024-05-01', '09:00:00'),
+    ('APT-002', 'PT-00002', 'EMP-002', 'Annual checkup', '2024-05-02', '10:00:00'),
+    ('APT-003', 'PT-00003', 'EMP-003', 'Physical therapy session', '2024-05-03', '11:00:00'),
+    ('APT-004', 'PT-00004', 'EMP-004', 'Cast removal', '2024-05-04', '12:00:00'),
+    ('APT-005', 'PT-00005', 'EMP-005', 'Dermatology consultation', '2024-05-05', '13:00:00'),
+    ('APT-006', 'PT-00006', 'EMP-001', 'Back pain assessment', '2024-05-06', '14:00:00'),
+    ('APT-007', 'PT-00007', 'EMP-002', 'Counseling session', '2024-05-07', '15:00:00'),
+    ('APT-008', 'PT-00008', 'EMP-003', 'Migraine consultation', '2024-05-08', '16:00:00'),
+    ('APT-009', 'PT-00009', 'EMP-004', 'Heart murmur checkup', '2024-05-09', '17:00:00'),
+    ('APT-010', 'PT-00010', 'EMP-005', 'Thyroid checkup', '2024-05-10', '18:00:00');
+    
 -- Sample data for TREATMENT table
 INSERT INTO TREATMENT (Treatment_id, Recipient_id, Employee_id_prescriber, Employee_id_conductor, Outcome, End_date, Start_date, Description, Pharmacy)
 VALUES
@@ -139,35 +139,35 @@ VALUES
     ('EMP-005');
 
 -- Additional data for VIP Patient View
-INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Professional_id, Purpose, Date, Time)
+INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Purpose, Date, Time)
 VALUES
-    ('APT-011', 'PT-00001', 'EMP-001', 'EMP-001', 'Follow-up appointment', '2024-04-25', '09:00:00'),
-    ('APT-012', 'PT-00001', 'EMP-001', 'EMP-001', 'Consultation', '2024-04-26', '10:00:00'),
-    ('APT-013', 'PT-00001', 'EMP-001', 'EMP-001', 'Consultation', '2024-04-27', '11:00:00'),
-    ('APT-014', 'PT-00001', 'EMP-001', 'EMP-001', 'Consultation', '2024-04-28', '12:00:00'),
-    ('APT-015', 'PT-00001', 'EMP-001', 'EMP-001', 'Consultation', '2024-04-29', '13:00:00'),
-    ('APT-016', 'PT-00002', 'EMP-002', 'EMP-002', 'Follow-up appointment', '2024-04-25', '09:00:00'),
-    ('APT-017', 'PT-00002', 'EMP-002', 'EMP-002', 'Consultation', '2024-04-26', '10:00:00'),
-    ('APT-018', 'PT-00002', 'EMP-002', 'EMP-002', 'Consultation', '2024-04-27', '11:00:00'),
-    ('APT-019', 'PT-00002', 'EMP-002', 'EMP-002', 'Consultation', '2024-04-28', '12:00:00'),
-    ('APT-020', 'PT-00002', 'EMP-002', 'EMP-002', 'Consultation', '2024-04-29', '13:00:00'),
-    ('APT-021', 'PT-00003', 'EMP-003', 'EMP-003', 'Follow-up appointment', '2024-04-25', '09:00:00'),
-    ('APT-022', 'PT-00003', 'EMP-003', 'EMP-003', 'Consultation', '2024-04-26', '10:00:00'),
-    ('APT-023', 'PT-00003', 'EMP-003', 'EMP-003', 'Consultation', '2024-04-27', '11:00:00'),
-    ('APT-024', 'PT-00003', 'EMP-003', 'EMP-003', 'Consultation', '2024-04-28', '12:00:00'),
-    ('APT-025', 'PT-00003', 'EMP-003', 'EMP-003', 'Consultation', '2024-04-29', '13:00:00');
+    ('APT-011', 'PT-00001', 'EMP-001', 'Follow-up appointment', '2024-04-25', '09:00:00'),
+    ('APT-012', 'PT-00001', 'EMP-001', 'Consultation', '2024-04-26', '10:00:00'),
+    ('APT-013', 'PT-00001', 'EMP-001', 'Consultation', '2024-04-27', '11:00:00'),
+    ('APT-014', 'PT-00001', 'EMP-001', 'Consultation', '2024-04-28', '12:00:00'),
+    ('APT-015', 'PT-00001', 'EMP-001', 'Consultation', '2024-04-29', '13:00:00'),
+    ('APT-016', 'PT-00002', 'EMP-002', 'Follow-up appointment', '2024-04-25', '09:00:00'),
+    ('APT-017', 'PT-00002', 'EMP-002', 'Consultation', '2024-04-26', '10:00:00'),
+    ('APT-018', 'PT-00002', 'EMP-002', 'Consultation', '2024-04-27', '11:00:00'),
+    ('APT-019', 'PT-00002', 'EMP-002', 'Consultation', '2024-04-28', '12:00:00'),
+    ('APT-020', 'PT-00002', 'EMP-002', 'Consultation', '2024-04-29', '13:00:00'),
+    ('APT-021', 'PT-00003', 'EMP-003', 'Follow-up appointment', '2024-04-25', '09:00:00'),
+    ('APT-022', 'PT-00003', 'EMP-003', 'Consultation', '2024-04-26', '10:00:00'),
+    ('APT-023', 'PT-00003', 'EMP-003', 'Consultation', '2024-04-27', '11:00:00'),
+    ('APT-024', 'PT-00003', 'EMP-003', 'Consultation', '2024-04-28', '12:00:00'),
+    ('APT-025', 'PT-00003', 'EMP-003', 'Consultation', '2024-04-29', '13:00:00');
 
 -- Additional data for Preferred Healthcare Professional View
-INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Professional_id, Purpose, Date, Time)
+INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Purpose, Date, Time)
 VALUES
-    ('APT-026', 'PT-00004', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-03-15', '09:00:00'),
-    ('APT-027', 'PT-00004', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-03-25', '09:00:00'),
-    ('APT-028', 'PT-00004', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-15', '09:00:00'),
-    ('APT-029', 'PT-00004', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-25', '09:00:00'),
-    ('APT-030', 'PT-00005', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-03-15', '09:00:00'),
-    ('APT-031', 'PT-00005', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-03-25', '09:00:00'),
-    ('APT-032', 'PT-00005', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-15', '09:00:00'),
-    ('APT-033', 'PT-00005', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-25', '09:00:00');
+    ('APT-026', 'PT-00004', 'EMP-004', 'Follow-up appointment', '2024-03-15', '09:00:00'),
+    ('APT-027', 'PT-00004', 'EMP-004', 'Follow-up appointment', '2024-03-25', '09:00:00'),
+    ('APT-028', 'PT-00004', 'EMP-004', 'Follow-up appointment', '2024-04-15', '09:00:00'),
+    ('APT-029', 'PT-00004', 'EMP-004', 'Follow-up appointment', '2024-04-25', '09:00:00'),
+    ('APT-030', 'PT-00005', 'EMP-005', 'Follow-up appointment', '2024-03-15', '09:00:00'),
+    ('APT-031', 'PT-00005', 'EMP-005', 'Follow-up appointment', '2024-03-25', '09:00:00'),
+    ('APT-032', 'PT-00005', 'EMP-005', 'Follow-up appointment', '2024-04-15', '09:00:00'),
+    ('APT-033', 'PT-00005', 'EMP-005', 'Follow-up appointment', '2024-04-25', '09:00:00');
 
 -- Additional data for TREATMENT table
 INSERT INTO TREATMENT (Treatment_id, Recipient_id, Employee_id_prescriber, Employee_id_conductor, Outcome, End_date, Start_date, Description, Pharmacy)
@@ -190,29 +190,29 @@ VALUES
 
 
 -- Additional data for Potential VIP Patient View
-INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Professional_id, Purpose, Date, Time)
+INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Purpose, Date, Time)
 VALUES
-    ('APT-034', 'PT-00007', 'EMP-002', 'EMP-002', 'Follow-up appointment', '2024-03-15', '09:00:00'),
-    ('APT-035', 'PT-00007', 'EMP-002', 'EMP-002', 'Follow-up appointment', '2024-03-25', '09:00:00'),
-    ('APT-036', 'PT-00007', 'EMP-002', 'EMP-002', 'Follow-up appointment', '2024-04-05', '09:00:00'),
-    ('APT-037', 'PT-00007', 'EMP-002', 'EMP-002', 'Follow-up appointment', '2024-04-15', '09:00:00'),
-    ('APT-038', 'PT-00007', 'EMP-002', 'EMP-002', 'Follow-up appointment', '2024-04-25', '09:00:00'),
-    ('APT-039', 'PT-00008', 'EMP-003', 'EMP-003', 'Follow-up appointment', '2024-03-15', '09:00:00'),
-    ('APT-040', 'PT-00008', 'EMP-003', 'EMP-003', 'Follow-up appointment', '2024-03-25', '09:00:00'),
-    ('APT-041', 'PT-00008', 'EMP-003', 'EMP-003', 'Follow-up appointment', '2024-04-05', '09:00:00'),
-    ('APT-042', 'PT-00008', 'EMP-003', 'EMP-003', 'Follow-up appointment', '2024-04-15', '09:00:00'),
-    ('APT-043', 'PT-00008', 'EMP-003', 'EMP-003', 'Follow-up appointment', '2024-04-25', '09:00:00');
+    ('APT-034', 'PT-00007', 'EMP-002', 'Follow-up appointment', '2024-03-15', '09:00:00'),
+    ('APT-035', 'PT-00007', 'EMP-002', 'Follow-up appointment', '2024-03-25', '09:00:00'),
+    ('APT-036', 'PT-00007', 'EMP-002', 'Follow-up appointment', '2024-04-05', '09:00:00'),
+    ('APT-037', 'PT-00007', 'EMP-002', 'Follow-up appointment', '2024-04-15', '09:00:00'),
+    ('APT-038', 'PT-00007', 'EMP-002', 'Follow-up appointment', '2024-04-25', '09:00:00'),
+    ('APT-039', 'PT-00008', 'EMP-003', 'Follow-up appointment', '2024-03-15', '09:00:00'),
+    ('APT-040', 'PT-00008', 'EMP-003', 'Follow-up appointment', '2024-03-25', '09:00:00'),
+    ('APT-041', 'PT-00008', 'EMP-003', 'Follow-up appointment', '2024-04-05', '09:00:00'),
+    ('APT-042', 'PT-00008', 'EMP-003', 'Follow-up appointment', '2024-04-15', '09:00:00'),
+    ('APT-043', 'PT-00008', 'EMP-003', 'Follow-up appointment', '2024-04-25', '09:00:00');
 
 -- Additional data for Top Staff View
-INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Professional_id, Purpose, Date, Time)
+INSERT INTO APPOINTMENT (Appointment_id, Patient_id, Employee_id, Purpose, Date, Time)
 VALUES
-    ('APT-044', 'PT-00009', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-01', '09:00:00'),
-    ('APT-045', 'PT-00009', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-02', '09:00:00'),
-    ('APT-046', 'PT-00009', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-03', '09:00:00'),
-    ('APT-047', 'PT-00009', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-04', '09:00:00'),
-    ('APT-048', 'PT-00009', 'EMP-004', 'EMP-004', 'Follow-up appointment', '2024-04-05', '09:00:00'),
-    ('APT-049', 'PT-00010', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-01', '09:00:00'),
-    ('APT-050', 'PT-00010', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-02', '09:00:00'),
-    ('APT-051', 'PT-00010', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-03', '09:00:00'),
-    ('APT-052', 'PT-00010', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-04', '09:00:00'),
-    ('APT-053', 'PT-00010', 'EMP-005', 'EMP-005', 'Follow-up appointment', '2024-04-05', '09:00:00');
+    ('APT-044', 'PT-00009', 'EMP-004', 'Follow-up appointment', '2024-04-01', '09:00:00'),
+    ('APT-045', 'PT-00009', 'EMP-004', 'Follow-up appointment', '2024-04-02', '09:00:00'),
+    ('APT-046', 'PT-00009', 'EMP-004', 'Follow-up appointment', '2024-04-03', '09:00:00'),
+    ('APT-047', 'PT-00009', 'EMP-004', 'Follow-up appointment', '2024-04-04', '09:00:00'),
+    ('APT-048', 'PT-00009', 'EMP-004', 'Follow-up appointment', '2024-04-05', '09:00:00'),
+    ('APT-049', 'PT-00010', 'EMP-005', 'Follow-up appointment', '2024-04-01', '09:00:00'),
+    ('APT-050', 'PT-00010', 'EMP-005', 'Follow-up appointment', '2024-04-02', '09:00:00'),
+    ('APT-051', 'PT-00010', 'EMP-005', 'Follow-up appointment', '2024-04-03', '09:00:00'),
+    ('APT-052', 'PT-00010', 'EMP-005', 'Follow-up appointment', '2024-04-04', '09:00:00'),
+    ('APT-053', 'PT-00010', 'EMP-005', 'Follow-up appointment', '2024-04-05', '09:00:00');
