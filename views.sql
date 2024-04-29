@@ -94,7 +94,7 @@ GROUP BY
     P.Patient_id,
     Full_Name
 HAVING
-    Appointment_Count > 4;
+    Appointment_Count > 3 AND Appointment_Count < 7;
 
 -- vIEW 5
 DROP VIEW IF EXISTS Top_Staff_View ;
