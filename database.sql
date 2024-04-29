@@ -1,6 +1,6 @@
 DROP SCHEMA IF EXISTS Phase3; -- take this line out
 CREATE database Phase3;
-USE preferred_healthcare_professional_viewEmployee_idPhase3;
+USE Phase3;
 CREATE TABLE PERSON (
     Person_id VARCHAR(10) PRIMARY KEY,
     FName text,  
@@ -17,9 +17,6 @@ CREATE TABLE PERSON (
 CREATE TABLE HEALTHCARE_PROFESSIONAL (
     Person_id VARCHAR(10),
     Employee_id VARCHAR(10) PRIMARY KEY,
-    FName text,
-    MName text,
-    SName text,
     Specialization VARCHAR(100),
     Department VARCHAR(100),
     Working_hours VARCHAR(50),
@@ -32,9 +29,6 @@ CREATE TABLE HEALTHCARE_PROFESSIONAL (
 CREATE TABLE PATIENT (
     Person_id VARCHAR(10),
     Patient_id VARCHAR(10) PRIMARY KEY,
-    FName text,
-    MName text,
-    SName text,
     Medical_history TEXT,
     FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id),
     CHECK(REGEXP_LIKE(Patient_id, '^PT-[0-9]{5}$'))
@@ -134,4 +128,3 @@ CREATE TABLE ADMINISTRATIVE_STAFF (
     Employee_admin_id VARCHAR(10) PRIMARY KEY,
     FOREIGN KEY(Employee_admin_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
 );
-
