@@ -48,13 +48,11 @@ ORDER BY
     Patient_Interaction_Count DESC;
 
 -- View 3 : Critical Treatment View
-
-DROP VIEW IF EXISTS Critical_Treatment_View ;
-
+DROP VIEW IF EXISTS Critical_Treatment_View;
 CREATE VIEW Critical_Treatment_View AS
 SELECT 
-    Treatment_id,
     Recipient_id AS Patient_id,
+    Treatment_id,
     Employee_id_prescriber AS Prescribing_Professional_id,
     Employee_id_conductor AS Conducting_Professional_id,
     Outcome,
@@ -62,23 +60,20 @@ SELECT
     Start_date,
     Description,
     Pharmacy,
-    COUNT(*) AS Treatment_Count
+    (SELECT COUNT(*) 
+     FROM TREATMENT t2 
+     WHERE t2.Recipient_id = t.Recipient_id 
+     AND t2.Start_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
+    ) AS Duplicate_Count
 FROM 
-    TREATMENT
+    TREATMENT t
 WHERE 
-    Start_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
+    t.Start_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
 GROUP BY 
-    Treatment_id,
-    Recipient_id,
-    Employee_id_prescriber,
-    Employee_id_conductor,
-    Outcome,
-    End_date,
-    Start_date,
-    Description,
-    Pharmacy
+    Patient_id, Treatment_id, Prescribing_Professional_id, Conducting_Professional_id, Outcome, End_date, Start_date, Description, Pharmacy
 HAVING 
-    COUNT(*) > 5;
+    Duplicate_Count > 5;
+
 
 -- View 4 
 DROP VIEW IF EXISTS Potential_VIP_Patient_View ;
