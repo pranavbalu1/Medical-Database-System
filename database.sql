@@ -20,8 +20,7 @@ CREATE TABLE HEALTHCARE_PROFESSIONAL (
     Specialization VARCHAR(100),
     Department VARCHAR(100),
     Working_hours VARCHAR(50),
-    Years_of_experience INT,
-    Address VARCHAR(255),
+    Start_date DATE,
     FOREIGN KEY(Person_id) REFERENCES PERSON(Person_id),
     CHECK(REGEXP_LIKE(Employee_id, '^EMP-[0-9]{3}$'))
 );
@@ -50,7 +49,6 @@ VALUES
     ('Wheat'),
 	('Sesame');
 
-
 CREATE TABLE MEDICAL_RECORD (
     Record_id VARCHAR(10) PRIMARY KEY,
     Patient_id VARCHAR(10) NOT NULL,
@@ -63,7 +61,6 @@ CREATE TABLE MEDICAL_RECORD (
 	FOREIGN KEY(Patient_id) REFERENCES PATIENT(Patient_id),
     FOREIGN KEY(Employee_id) REFERENCES HEALTHCARE_PROFESSIONAL(Employee_id)
 );
-
 
 CREATE TABLE INSURANCE_INFORMATION (
     Insurance_id VARCHAR(10) PRIMARY KEY,

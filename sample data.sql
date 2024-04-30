@@ -15,17 +15,17 @@ VALUES
 
 
     
-INSERT INTO HEALTHCARE_PROFESSIONAL (Person_id, Employee_id, Specialization, Department, Working_hours)
+INSERT INTO HEALTHCARE_PROFESSIONAL (Person_id, Employee_id, Specialization, Department, Working_hours, Start_date)
 VALUES
-    ('P-003', 'EMP-001', 'Cardiologist', 'Cardiology', '8:00 AM - 4:00 PM'),
-    ('P-004', 'EMP-002', 'Pediatrician', 'Pediatrics', '9:00 AM - 5:00 PM'),
-    ('P-005', 'EMP-003', 'Orthopedic Surgeon', 'Orthopedics', '7:00 AM - 3:00 PM'),
-    ('P-006', 'EMP-004', 'Radiologist', 'Radiology', '8:30 AM - 4:30 PM'),
-    ('P-007', 'EMP-005', 'Dermatologist', 'Dermatology', '8:00 AM - 4:00 PM'),
-    ('P-008', 'EMP-006', 'Physical Therapist', 'Physical Therapy', '10:00 AM - 6:00 PM'),
-    ('P-009', 'EMP-007', 'Pharmacist', 'Pharmacy', '9:00 AM - 5:00 PM'),
-    ('P-010', 'EMP-008', 'Surgical Nurse', 'Surgery', '7:00 AM - 3:00 PM'),
-    ('P-011', 'EMP-009', 'Medical Secretary', 'Administration', '8:30 AM - 4:30 PM');
+    ('P-003', 'EMP-001', 'Cardiologist', 'Cardiology', '8:00 AM - 4:00 PM', '2021-04-28'),
+    ('P-004', 'EMP-002', 'Pediatrician', 'Pediatrics', '9:00 AM - 5:00 PM', '2022-03-27'),
+    ('P-005', 'EMP-003', 'Orthopedic Surgeon', 'Orthopedics', '7:00 AM - 3:00 PM', '2023-02-26'),
+    ('P-006', 'EMP-004', 'Radiologist', 'Radiology', '8:30 AM - 4:30 PM', '2024-01-25'),
+    ('P-007', 'EMP-005', 'Dermatologist', 'Dermatology', '8:00 AM - 4:00 PM', '2021-12-24'),
+    ('P-008', 'EMP-006', 'Physical Therapist', 'Physical Therapy', '10:00 AM - 6:00 PM', '2022-11-23'),
+    ('P-009', 'EMP-007', 'Pharmacist', 'Pharmacy', '9:00 AM - 5:00 PM', '2023-10-22'),
+    ('P-010', 'EMP-008', 'Surgical Nurse', 'Surgery', '7:00 AM - 3:00 PM', '2024-09-21'),
+    ('P-011', 'EMP-009', 'Medical Secretary', 'Administration', '8:30 AM - 4:30 PM', '2022-08-20');
 
 -- Sample data for PATIENT table
 INSERT INTO PATIENT (Person_id, Patient_id, Medical_history)
