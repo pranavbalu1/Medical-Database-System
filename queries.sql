@@ -77,17 +77,29 @@ WHERE
 );
 
 -- Retrieve all medical records created after the most recent healthcare professional was hired.
-SELECT *
-FROM MEDICAL_RECORD
-WHERE DATE(Record_creation_date) > (
-    SELECT MAX(Employee_hire_date)
-    FROM (
-        SELECT MAX(Record_creation_date) AS Employee_hire_date
-        FROM HEALTHCARE_PROFESSIONAL
-    ) AS Latest_Hire
+SELECT MR.*
+FROM MEDICAL_RECORD MR
+JOIN TREATMENT T ON MR.Patient_id = T.Recipient_id
+WHERE T.End_date < (
+    SELECT MAX(Start_date)
+    FROM HEALTHCARE_PROFESSIONAL
 );
 
+
 -- List all staff who have been registered as VIP patients within a month of their employment.
+SELECT DISTINCT
+    HP.Employee_id,
+    PN.FName AS First_Name,
+    PN.SName AS Last_Name
+FROM 
+    VIP_Patient_View VIP
+JOIN 
+    HEALTHCARE_PROFESSIONAL HP ON VIP.Patient_id = HP.Person_id
+JOIN 
+    PERSON PN ON HP.Person_id = PN.Person_id
+WHERE 
+    VIP.Enrollment_Date >= DATE_SUB(HP.Start_date, INTERVAL 1 MONTH)
+    AND VIP.Enrollment_Date <= HP.Start_date;
 
 
 -- Identify the department with the highest number of unique patient visits.

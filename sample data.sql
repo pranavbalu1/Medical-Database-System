@@ -24,7 +24,7 @@ VALUES
     ('P-007', 'EMP-005', 'Dermatologist', 'Dermatology', '8:00 AM - 4:00 PM', '2021-12-24'),
     ('P-008', 'EMP-006', 'Physical Therapist', 'Physical Therapy', '10:00 AM - 6:00 PM', '2022-11-23'),
     ('P-009', 'EMP-007', 'Pharmacist', 'Pharmacy', '9:00 AM - 5:00 PM', '2023-10-22'),
-    ('P-010', 'EMP-008', 'Surgical Nurse', 'Surgery', '7:00 AM - 3:00 PM', '2024-09-21'),
+    ('P-010', 'EMP-008', 'Surgical Nurse', 'Surgery', '7:00 AM - 3:00 PM', '2024-05-03'),
     ('P-011', 'EMP-009', 'Medical Secretary', 'Administration', '8:30 AM - 4:30 PM', '2022-08-20');
 
 -- Sample data for PATIENT table
@@ -103,16 +103,16 @@ VALUES
 -- Sample data for TREATMENT table
 INSERT INTO TREATMENT (Treatment_id, Recipient_id, Employee_id_prescriber, Employee_id_conductor, Outcome, End_date, Start_date, Description, Pharmacy)
 VALUES
-    ('TRT-001', 'PT-00001', 'EMP-001', 'EMP-001', 'Stable condition', '2024-05-15', '2024-05-01', 'Prescribed medication', 'ABC Pharmacy'),
-    ('TRT-002', 'PT-00002', 'EMP-002', 'EMP-002', 'Improvement shown', '2024-05-16', '2024-05-02', 'Prescribed inhaler', 'XYZ Pharmacy'),
-    ('TRT-003', 'PT-00003', 'EMP-003', 'EMP-003', 'Successful recovery', '2024-05-17', '2024-05-03', 'Physical therapy sessions', 'DEF Pharmacy'),
-    ('TRT-004', 'PT-00004', 'EMP-004', 'EMP-004', 'Healing well', '2024-05-18', '2024-05-04', 'Follow-up appointment scheduled', 'GHI Pharmacy'),
-    ('TRT-005', 'PT-00005', 'EMP-005', 'EMP-005', 'Skin condition improving', '2024-05-19', '2024-05-05', 'Continue medication', 'JKL Pharmacy'),
-    ('TRT-006', 'PT-00006', 'EMP-001', 'EMP-001', 'Reduced pain levels', '2024-05-20', '2024-05-06', 'Physical therapy sessions', 'MNO Pharmacy'),
-    ('TRT-007', 'PT-00007', 'EMP-002', 'EMP-002', 'Mental health improving', '2024-05-21', '2024-05-07', 'Continued counseling sessions', 'PQR Pharmacy'),
-    ('TRT-008', 'PT-00008', 'EMP-003', 'EMP-003', 'Less frequent migraines', '2024-05-22', '2024-05-08', 'Prescribed new medication', 'STU Pharmacy'),
-    ('TRT-009', 'PT-00009', 'EMP-004', 'EMP-004', 'Stable condition', '2024-05-23', '2024-05-09', 'Follow-up appointment scheduled', 'VWX Pharmacy'),
-    ('TRT-010', 'PT-00010', 'EMP-005', 'EMP-005', 'Thyroid levels balanced', '2024-05-24', '2024-05-10', 'Continue current medication', 'YZA Pharmacy');
+    ('TRT-001', 'PT-00001', 'EMP-001', 'EMP-001', 'Stable condition', '2024-07-15', '2023-03-01', 'Prescribed medication', 'ABC Pharmacy'),
+    ('TRT-002', 'PT-00002', 'EMP-002', 'EMP-002', 'Improvement shown', '2023-06-16', '2023-03-02', 'Prescribed inhaler', 'XYZ Pharmacy'),
+    ('TRT-003', 'PT-00003', 'EMP-003', 'EMP-003', 'Successful recovery', '2024-09-17', '2023-02-03', 'Physical therapy sessions', 'DEF Pharmacy'),
+    ('TRT-004', 'PT-00004', 'EMP-004', 'EMP-004', 'Healing well', '2023-08-18', '2023-01-04', 'Follow-up appointment scheduled', 'GHI Pharmacy'),
+    ('TRT-005', 'PT-00005', 'EMP-005', 'EMP-005', 'Skin condition improving', '2024-05-19', '2023-06-05', 'Continue medication', 'JKL Pharmacy'),
+    ('TRT-006', 'PT-00006', 'EMP-001', 'EMP-001', 'Reduced pain levels', '2024-08-20', '2023-01-06', 'Physical therapy sessions', 'MNO Pharmacy'),
+    ('TRT-007', 'PT-00007', 'EMP-002', 'EMP-002', 'Mental health improving', '2023-10-21', '2023-02-07', 'Continued counseling sessions', 'PQR Pharmacy'),
+    ('TRT-008', 'PT-00008', 'EMP-003', 'EMP-003', 'Less frequent migraines', '2024-11-22', '2023-02-08', 'Prescribed new medication', 'STU Pharmacy'),
+    ('TRT-009', 'PT-00009', 'EMP-004', 'EMP-004', 'Stable condition', '2024-07-23', '2023-04-09', 'Follow-up appointment scheduled', 'VWX Pharmacy'),
+    ('TRT-010', 'PT-00010', 'EMP-005', 'EMP-005', 'Thyroid levels balanced', '2024-06-24', '2023-05-10', 'Continue current medication', 'YZA Pharmacy');
 
 -- Sample data for DOCTOR, TECHNICIAN, NURSE, and ADMINISTRATIVE_STAFF tables
 INSERT INTO DOCTOR (Employee_doctor_id)
